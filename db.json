@@ -1,19 +1,13 @@
 {
-  "posts": [
+  "todos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "content": "첫번째",
+      "is_done": "false"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "content": "ㅅ겨ㅛㄱ셔ㅑ",
+      "id": 7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

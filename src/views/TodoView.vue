@@ -31,13 +31,7 @@
   </button>
 
   <!-- Modal -->
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="exampleModal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -46,16 +40,17 @@
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
-            aria-label="Close"
           ></button>
         </div>
         <form action="">
           <div class="input-group mb-3">
             <input
+              v-model="todo"
               type="text"
               class="form-control"
               placeholder="무엇을 해야할까?"
             />
+            <p>{{ todo }}</p>
           </div>
           <!-- <div class="modal-body">...</div> -->
           <div class="modal-footer">
@@ -66,7 +61,12 @@
             >
               취소
             </button>
-            <button @click="addTodo" type="button" class="btn btn-success">
+            <button
+              data-bs-dismiss="modal"
+              @click="addTodo"
+              type="button"
+              class="btn btn-success"
+            >
               등록
             </button>
           </div>
@@ -74,17 +74,23 @@
       </div>
     </div>
   </div>
-  <TodoModalComp v-if="isAdd"></TodoModalComp>
+  <!-- <TodoModalComp v-if="isAdd"></TodoModalComp> -->
 </template>
 
 <script setup>
 import TodoModalComp from "@/components/todo/TodoModalComp.vue";
 import { reactive, ref } from "vue";
+import { postTodo } from "@/api/todos";
 
 const todos = reactive([]);
+const todo = ref("");
 // const isAdd = ref(false);
 // 등록을 누르면 모달창이 나와서 거기서 값을 입력하고 등록 취소를 결정한다
 const addTodo = () => {
+  console.log(todo.value);
+
+  postTodo({ content: todo.value });
+
   // todos.push{}
   // isAdd.value = true;
 };
