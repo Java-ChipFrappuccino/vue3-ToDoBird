@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink class="nav-link active" aria-current="page" to="/todo"
+            <RouterLink class="nav-link" aria-current="page" to="/todo"
               >ToDo</RouterLink
             >
           </li>

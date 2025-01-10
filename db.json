@@ -1,13 +1,9 @@
 {
   "todos": [
     {
-      "id": 1,
-      "content": "첫번째",
-      "is_done": "false"
-    },
-    {
-      "content": "ㅅ겨ㅛㄱ셔ㅑ",
-      "id": 7
+      "is_done": false,
+      "content": "3456",
+      "id": 1
     }
   ]
 }
