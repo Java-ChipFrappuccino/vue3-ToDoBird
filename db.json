@@ -1,8 +1,15 @@
 {
   "todos": [
     {
-      "is_done": false,
-      "content": "3456",
+      "is_done": true,
+      "content": "434",
+      "id": 1
+    }
+  ],
+  "album": [
+    {
+      "category": false,
+      "url": "434",
       "id": 1
     }
   ]

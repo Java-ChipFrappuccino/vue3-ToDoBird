@@ -4,6 +4,7 @@ import TodoView from "../views/TodoView.vue";
 import OtherView from "@/views/other/OtherView.vue";
 import OtherHomeView from "@/views/other/OtherHomeView.vue";
 import WeatherView from "@/views/other/weather/WeatherView.vue";
+import UnsplashView from "@/views/other/unsplash/UnsplashView.vue";
 import FeaturesView from "@/views/other/features/FeaturesView.vue";
 
 const router = createRouter({
@@ -31,6 +32,7 @@ const router = createRouter({
       path: "/other",
       name: "OtherView",
       component: OtherView,
+      meta: { noContainer: true }, // 레이아웃 제외 플래그
       children: [
         {
           path: "",
@@ -38,14 +40,19 @@ const router = createRouter({
           component: OtherHomeView,
         },
         {
-          path: "other/weather/",
+          path: "weather",
           name: "WeatherView",
           component: WeatherView,
         },
         {
-          path: "feathers/",
-          name: "FeathersView",
+          path: "features",
+          name: "FeaturesView",
           component: FeaturesView,
+        },
+        {
+          path: "unsplash",
+          name: "UnsplashView",
+          component: UnsplashView,
         },
       ],
     },

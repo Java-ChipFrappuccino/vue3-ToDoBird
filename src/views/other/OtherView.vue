@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-sm bg-light mt-0">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -16,19 +16,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <RouterLink class="nav-link" aria-current="page" to="/weather"
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
+                to="/other/weather"
                 >Weather</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/features">Features</RouterLink>
+              <RouterLink class="nav-link" to="/other/unsplash"
+                >Unsplash</RouterLink
+              >
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/other/features"
+                >Features</RouterLink
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
-  <RouterView></RouterView>
+  <div class="container py-4">
+    <RouterView></RouterView>
+  </div>
 </template>
 
 <script setup>
