@@ -1,6 +1,6 @@
 import axios from "axios";
 //서버 베이스 url
-const url = "http://localhost:3000/";
+const url = import.meta.env.VITE_DB_BASE_URL;
 export const postTodo = async (data) => {
   try {
     const response = await axios.post(url + "todos", {

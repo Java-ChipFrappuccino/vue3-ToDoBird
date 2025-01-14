@@ -12,5 +12,61 @@
       "url": "434",
       "id": 1
     }
+  ],
+  "posts": [
+    {
+      "content": "잘보고 갑니다",
+      "writer": "정형돈",
+      "createdAt": "2025.01.14",
+      "id": 1
+    },
+    {
+      "content": "잘보고 갑니다2",
+      "writer": "유재석",
+      "createdAt": "2025.01.14",
+      "id": 2
+    },
+    {
+      "content": "잘보고 갑니다3",
+      "writer": "정준하",
+      "createdAt": "2025.01.14",
+      "id": 3
+    },
+    {
+      "content": "잘보고 갑니다4",
+      "writer": "하하",
+      "createdAt": "2025.01.14",
+      "id": 4
+    },
+    {
+      "content": "잘보고 갑니다5",
+      "writer": "노홍철",
+      "createdAt": "2025.01.14",
+      "id": 5
+    },
+    {
+      "content": "잘보고 갑니다4",
+      "writer": "하하",
+      "createdAt": "2025.01.14",
+      "id": 6
+    },
+    {
+      "content": "잘보고 갑니다4",
+      "writer": "하하",
+      "createdAt": "2025.01.14",
+      "id": 7
+    },
+    {
+      "content": "잘보고 갑니다4",
+      "writer": "하하",
+      "createdAt": "2025.01.14",
+      "id": 8
+    },
+    {
+      "content": "잘보고 갑니다4",
+      "writer": "하하",
+      "createdAt": "2025.01.14",
+      "id": 9
+    }
   ]
 }

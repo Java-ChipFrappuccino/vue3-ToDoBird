@@ -5,7 +5,7 @@ import OtherView from "@/views/other/OtherView.vue";
 import OtherHomeView from "@/views/other/OtherHomeView.vue";
 import WeatherView from "@/views/other/weather/WeatherView.vue";
 import UnsplashView from "@/views/other/unsplash/UnsplashView.vue";
-import FeaturesView from "@/views/other/features/FeaturesView.vue";
+import GuestBookView from "@/views/other/guestbook/GuestBookView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,9 +45,9 @@ const router = createRouter({
           component: WeatherView,
         },
         {
-          path: "features",
-          name: "FeaturesView",
-          component: FeaturesView,
+          path: "guestbook",
+          name: "GuestBookView",
+          component: GuestBookView,
         },
         {
           path: "unsplash",

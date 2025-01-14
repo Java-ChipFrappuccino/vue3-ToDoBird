@@ -29,8 +29,8 @@
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/other/features"
-                >Features</RouterLink
+              <RouterLink class="nav-link" to="/other/guestbook"
+                >GuestBook</RouterLink
               >
             </li>
           </ul>

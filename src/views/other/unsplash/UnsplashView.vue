@@ -17,13 +17,49 @@
         </div>
       </TransitionGroup>
     </div>
+    <!-- 감지용 요소 -->
+    <div ref="sentinel"></div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useUnsplashStore } from "@/stores/unsplash";
-const { photos, isLoading, error, getPhotos } = useUnsplashStore();
-getPhotos(30);
+const { photos, isLoading, error, getPhotos, resetStore } = useUnsplashStore();
+
+const sentinel = ref(null);
+
+let isFetching = false;
+
+const handleScroll = async () => {
+  if (isFetching) return;
+  isFetching = true;
+  await getPhotos(10);
+  isFetching = false;
+};
+let observer = null;
+
+onMounted(() => {
+  // Intersection Observer 생성
+  observer = new IntersectionObserver(async (entries) => {
+    if (entries[0].isIntersecting) {
+      await handleScroll(); // 감지되면 이미지 로드
+    }
+  });
+
+  if (sentinel.value) {
+    observer.observe(sentinel.value); // 감지 요소 관찰 시작
+  }
+});
+
+onBeforeUnmount(() => {
+  if (observer && sentinel.value) {
+    observer.unobserve(sentinel.value); // 관찰 중단
+    resetStore();
+  }
+});
+
+// getPhotos(30);
 // console.log(photos);
 // console.log(photos[0].urls.small);
 </script>

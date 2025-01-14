@@ -23,5 +23,11 @@ export const useUnsplashStore = defineStore("unsplash", () => {
       isLoading.value = false;
     }
   };
-  return { photos, isLoading, error, getPhotos };
+  // 상태 초기화 메서드
+  const resetStore = () => {
+    photos.value = [];
+    isLoading.value = false;
+    error.value = null;
+  };
+  return { photos, isLoading, error, getPhotos, resetStore };
 });
