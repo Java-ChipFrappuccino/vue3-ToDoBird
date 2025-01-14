@@ -33,7 +33,8 @@ const endPoint = ref(null);
 onMounted(async () => {
   const observer = new IntersectionObserver(async (entries) => {
     if (entries[0].isIntersecting) {
-      posts.value = await getPostList(8); // getPostList()가 반환하는 프로미스가 해결될 때까지 기다림
+      const { data, totalCount } = await getPostList(1, 3); // getPostList()가 반환하는 프로미스가 해결될 때까지 기다림
+      posts.value = data;
       console.log(posts.value);
     }
   });
