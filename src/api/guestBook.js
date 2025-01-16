@@ -1,11 +1,15 @@
 import axios from "axios";
-
 const url = import.meta.env.VITE_DB_BASE_URL;
 
 export const getPostList = async (page, limit) => {
   try {
     const response = await axios.get(url + "posts", {
-      params: { _page: page, _limit: limit },
+      params: {
+        _page: page,
+        _limit: limit,
+        _sort: "createdAt",
+        _order: "desc",
+      },
     });
 
     return {
@@ -19,4 +23,10 @@ export const getPostList = async (page, limit) => {
 
 export const getPostById = () => {};
 
-export const createPost = () => {};
+export const createPost = async (data) => {
+  await axios.post(url + "posts", {
+    writer: data.writer,
+    content: data.content,
+    createdAt: data.createdAt,
+  });
+};
