@@ -1,4 +1,20 @@
 <template>
+  <el-button-group>
+    <el-button type="primary" :icon="ArrowLeft"
+      ><el-icon class="el-icon--right"><ArrowLeft /></el-icon>Previous
+      Page</el-button
+    >
+    <el-button type="primary">
+      Next Page<el-icon class="el-icon--right"><ArrowRight /></el-icon>
+    </el-button>
+  </el-button-group>
+
+  <el-button-group class="ml-4">
+    <el-button type="primary" :icon="Edit" />
+    <el-button type="primary" :icon="Share" />
+    <el-button type="primary" :icon="Delete" />
+  </el-button-group>
+
   <!-- Button trigger modal -->
   <button
     type="button"
